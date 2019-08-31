@@ -1,0 +1,17 @@
+digraph G { 
+rankdir=TB;
+graph [nodesep=0.5 ];
+node [shape = record, fillcolor=seashell2];
+nodofermin [ label ="<C0>|fermin p(hammer) |<C1>"]; 
+nodohammer:C0 -> nodofermin
+nodohammer [ label ="<C0>|hammer p(luigi) |<C1>"]; 
+nodoluigi:C1 -> nodomario
+nodoluigi:C0 -> nodohammer
+nodoluigi [ label ="<C0>|luigi|<C1>"]; 
+nodomario:C1 -> nodopeach
+nodomario [ label ="<C0>|mario p(luigi) |<C1>"]; 
+nodopeach:C1 -> nodopow
+nodopeach [ label ="<C0>|peach p(mario) |<C1>"]; 
+nodopow [ label ="<C0>|pow p(peach) |<C1>"]; 
+
+}
